@@ -20,8 +20,8 @@ if img is not None:
     text2 = st.text_input('Bottom text')
 
     if len(text1) > 0 and len(text2) >0:
-        textsize1 = cv.getTextSize(text1, font, 3, 2)
-        textsize2 = cv.getTextSize(text2, font, 3, 2)
+        textsize1 = cv.getTextSize(text1, font, 2, 2)
+        textsize2 = cv.getTextSize(text2, font, 2, 2)
 
         textX1 = int((img_grey.shape[1] - textsize1[0][0]) / 2)
         textY1 = int(img.shape[0] - (img.shape[0] - 2 * textsize1[1]))
@@ -29,9 +29,9 @@ if img is not None:
         textX2 = int((img_grey.shape[1] - textsize2[0][0]) / 2)
         textY2 = int((img.shape[0] - textsize2[1]))
 
-        cv.putText(meme_copy, text1, (textX1, textY1), font, 3, (0, 0, 0), 3)
+        cv.putText(meme_copy, text1, (textX1, textY1), font, 2, (0, 0, 0), 3)
 
-        cv.putText(meme_copy, text2, (textX2, textY2), font, 3, (0, 0, 0), 3)
+        cv.putText(meme_copy, text2, (textX2, textY2), font, 2, (0, 0, 0), 3)
 
         cv.imshow('meme', meme_copy)
         cv.waitKey(0)
