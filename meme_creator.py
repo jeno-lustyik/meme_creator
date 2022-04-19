@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import streamlit as st
 from PIL import Image
 
+
 st.title('Meme creator v0.1')
 
 img = st.file_uploader('Upload your image here:')
